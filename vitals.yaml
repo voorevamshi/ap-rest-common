@@ -1,0 +1,8 @@
+apiVersion: v1
+metadata:
+  askId: AIDE_0076365
+  caAgileId: 44520334229d
+  projectKey: com.optum
+  projectFriendlyName: oap-ap-rest-common
+  componentType: code
+  targetQG: GATE_00

@@ -1,0 +1,27 @@
+# maven target folder
+target/
+
+#application logs folder
+logs/
+
+# Compiled class file 
+*.class 
+
+#eclipse project file
+*.project
+
+#back up files
+*.bak
+
+# Log file 
+*.log
+#rebel config
+rebel.xml
+#package files
+*.tar.gz
+*.war
+*.ear
+*.zip
+*.rar
+/.settings/
+/.classpath

@@ -1,1 +1,2 @@
-# ap-rest-common
+# oap-dev-ap-rest-common
+Rest Common framework project

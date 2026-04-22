@@ -1,0 +1,8 @@
+CODEOWNERS
+# Code Owners
+# For configuration options please check the following documentation:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo.
+# These owners will be requested for review when someone opens a pull request
+*   @cgitzla @pchaud7

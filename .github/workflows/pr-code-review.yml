@@ -1,0 +1,23 @@
+name: AI based Agent to Review Code in PRs
+
+on:
+  pull_request:
+    types: ["ready_for_review", "opened" , "synchronize"] # This check allows to trigger a PR when converting a draft PR to a regular PR and when a regular PR is opened and manage PR updates
+    branches: ["*"]   #you can change/limit to any branch you wish to
+
+  pull_request_target: # Needed if you raise PRs from forks
+
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write      # Make sure this is in 'write', as the action
+  security-events: write    # displays the review through th PR comments
+  checks: write
+  id-token: write
+
+jobs:
+    code-reviewer:
+        if: ${{ github.event.pull_request.draft == false }} # This check prevents to execute code review agent on draft PRs
+        uses: optum-eeps/Code-Review-Agent/.github/workflows/pr-code-review.yml@v2
+        secrets:
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Must add this, this auto-generates a token neccessary for the action to issue comments to the PR
